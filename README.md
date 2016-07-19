@@ -38,24 +38,29 @@ infinite loop. Hook your frequency counter up here to get the "Digital Write
 As well as the performance benchmarks, BMAR looks into other aspects of a
 microcontroller's characteristics. These are:
 
-* Power Draw: BMAR tests the power draw of the Arduino boards via the USB port  
-  in three modes: Load, Idle, and Sleep. To test for Load draw, the Whetstone  
-  benchmark is run and the power draw recorded via an ammeter; Idle results are  
-  obtained while the microcontroller is in a delay() cycle; and Sleep results  
-  when the microcontroller is in its interruptable low-power sleep mode. Note,  
-  however, that this is not always the absolute lowest power possible: for the  
-  purposes of BMAR, only sleep modes accessible through the Arduino IDE in a  
-  simple sketch are used. For some boards, no sleep modes are available without  
-  various workarounds and hacks - these are immediately obvious thanks to the  
-  fact that the idle power draw will match the sleep power draw in the results!
-* Compiled Sketch Size: Having a load of flash memory available for sketches  
-  isn't much use if your sketches are huge. To obtain these results, the  
-  BareMinimum.ino and Blink.ino sketches included with the Arduino IDE are  
-  compiled and the size of the resulting binary recorded.
-* Footprint: The width, breadth, and height of each board is measured with  
-  calipers. Note that the results may differ from the official measurements  
-  found on the manufacturer's documentation, as the measurements for BMAR  
-  take into account any components sitting proud of the overall PCB.
+### Power Draw
+BMAR tests the power draw of the Arduino boards via the USB port in three modes:
+Load, Idle, and Sleep. To test for Load draw, the Whetstone benchmark is run and
+the power draw recorded via an ammeter; Idle results are obtained while the
+microcontroller is in a delay() cycle; and Sleep results recorded when the
+microcontroller is in its interruptable low-power sleep mode. Note, however,
+that this is not always the absolute lowest power possible: for the purposes of
+BMAR, only sleep modes accessible through the Arduino IDE in a simple sketch are
+used. For some boards, no sleep modes are available without various workarounds
+and hacks - these are immediately obvious thanks to the fact that the idle power
+draw will match the sleep power draw in the results!
+
+## Compiled Sketch Size
+Having a load of flash memory available for sketches isn't much use if your
+sketches are huge. To obtain these results, the BareMinimum.ino and Blink.ino
+sketches included with the Arduino IDE are compiled and the size of the
+resulting binaries recorded.
+
+## Footprint
+The width, breadth, and height of each board is measured with calipers. Note
+that the results may differ from the official measurements found on the
+manufacturer's documentation, as the measurements for BMAR take into account any
+components sitting proud of the overall PCB.
 
 ## Contributing
 If you've got a board you'd like to see included in BMAR, feel free to run the
