@@ -50,13 +50,13 @@ used. For some boards, no sleep modes are available without various workarounds
 and hacks - these are immediately obvious thanks to the fact that the idle power
 draw will match the sleep power draw in the results!
 
-## Compiled Sketch Size
+### Compiled Sketch Size
 Having a load of flash memory available for sketches isn't much use if your
 sketches are huge. To obtain these results, the BareMinimum.ino and Blink.ino
 sketches included with the Arduino IDE are compiled and the size of the
 resulting binaries recorded.
 
-## Footprint
+### Footprint
 The width, breadth, and height of each board is measured with calipers. Note
 that the results may differ from the official measurements found on the
 manufacturer's documentation, as the measurements for BMAR take into account any
